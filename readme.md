@@ -42,3 +42,34 @@
    - Explain why `31` is used as a multiplier /ANS = (prime number, efficient distribution, fast computation).
    - Explain why `101` is used as a modulus /ANS = (prime number, even distribution, avoids common factors).
 
+---
+
+# Task 3: SHA-256 Padding
+
+**Objective:** Implement a Python function that calculates SHA-256 padding for a given file.  
+The function reads a file, computes the required padding, and prints the final padded message in hex format.  
+
+## **Steps:**
+
+### **1. Read File Content:**
+   - Read the file as binary data.
+   - Convert the data to hexadecimal representation for debugging.
+
+### **2. Compute Original Message Length:**
+   - Calculate the message length in bits (bytes × 8).
+   - This value will be stored in the last 8 bytes of the final padded message.
+
+### **3. Append '1' Bit (`0x80` in hex):**
+   - SHA-256 padding requires a `1` bit to mark the end of the message.
+   - This is represented as `0x80` in hexadecimal.
+
+### **4. Compute Zero Padding:**
+   - Add enough zero bits so that the total message length is 448 mod 512.
+   - Ensures that the final message (after adding the length) is a multiple of 512 bits (64 bytes).
+
+### **5. Append Original Message Length (64-bit Big-Endian Integer):**
+   - Store the original message length** as a 64-bit (8-byte) big-endian integer**.
+   - This ensures the receiver can correctly determine the pre-padding length.
+
+   ---
+
