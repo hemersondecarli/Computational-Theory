@@ -98,3 +98,38 @@ Calculate the first 100 prime numbers using two well-established algorithms:
    - **Sieve of Eratosthenes:** Generate primes up to a **precomputed limit**.  
 
 ---
+
+# Task 5: Roots
+
+## **Objective**
+- Compute the **first 32 bits of the fractional part** of the square roots of the **first 100 prime numbers**.
+
+## **Approach**
+
+1. **Find the first 100 prime numbers** using Trial Division.
+2. **Compute the square root of each prime**.
+3. **Extract the fractional part** from the square root.
+4. **Convert the fractional part into a 32-bit binary representation**.
+
+---
+
+## **Steps Implemented So Far**
+
+### **1. Compute the First 100 Prime Numbers**
+- We use the **Trial Division Algorithm** to generate prime numbers.
+- The function iterates through numbers, checking if they are **divisible only by 1 and themselves**.
+- Only numbers **up to the square root** are checked for divisibility to improve efficiency.
+
+---
+
+### **2. Compute Square Root and Extract the Fractional Part**
+- We compute `sqrt(n)`, then subtract the integer part to get **only the fractional value**.
+- This fractional part is **what we convert into a 32-bit binary number**.
+
+---
+
+### **3. Convert Fractional Part to 32-bit Binary**
+- We repeatedly **multiply the fraction by 2**, extracting `1` for values `≥1`, and `0` otherwise.
+- This continues for **32 iterations** to obtain a 32-bit binary string.
+
+---
