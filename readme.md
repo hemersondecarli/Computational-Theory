@@ -73,3 +73,28 @@ The function reads a file, computes the required padding, and prints the final p
 
    ---
 
+# Task 4: Prime Numbers
+
+## **Objective**
+Calculate the first 100 prime numbers using two well-established algorithms:  
+1. **Trial Division Algorithm** (Checking divisibility up to the square root).  
+2. **Sieve of Eratosthenes** (Efficient prime number generation).  
+
+---
+
+## **Steps:**
+
+### **1. Implement Prime Number Check**
+   - **Trial Division:**  
+     - Check divisibility for numbers **up to the square root** of `n` to determine primality.  
+     - This method is **slower** but simple.  
+
+   - **Sieve of Eratosthenes:**  
+     - Mark multiples of each prime starting from `2` as **non-prime**.  
+     - Faster for computing **multiple prime numbers at once**.
+
+### **2. Generate the First 100 Prime Numbers**
+   - **Trial Division:** Iterate through numbers, checking for primality.  
+   - **Sieve of Eratosthenes:** Generate primes up to a **precomputed limit**.  
+
+---
