@@ -133,3 +133,43 @@ Calculate the first 100 prime numbers using two well-established algorithms:
 - This continues for **32 iterations** to obtain a 32-bit binary string.
 
 ---
+
+# Task 6: Proof of Work
+
+## **Objective**
+- Identify the **English word** with the **greatest number of leading 0 bits**.
+- Provide proof that the word(s) exist in at least one **English dictionary**.
+
+---
+
+## **Approach**
+1. **Load a list of English words** from a dictionary file.
+2. **Compute the SHA-256 hash** for each word.
+3. **Convert the hash into a binary representation**.
+4. **Count the number of leading 0 bits** in each hash.
+5. **Find the word(s) with the most leading 0 bits**.
+6. **Verify that the word exists in a dictionary**.
+
+---
+
+### **1. Load an English Dictionary**
+- A wordlist file (`words.txt`) was used to obtain a list of **valid English words**.
+- The dataset includes **common English words** from **various dictionaries**.
+
+---
+
+### **2. Compute the SHA-256 Hash of Each Word**
+- Each word was converted to a **SHA-256 hash**.
+- The hash was then represented in **binary format**.
+
+---
+
+### **3. Count Leading 0 Bits in the Hash**
+- Each hash was analyzed to determine the **number of leading zeros**.
+- The word(s) with the **highest count** of leading 0 bits were identified.
+
+---
+
+### **4. Verify Word in an Online Dictionary**
+- To confirm the word exists, an **automated search** was performed in **Merriam-Webster**.
+- The dictionary lookup ensures that the word is **genuinely English**
