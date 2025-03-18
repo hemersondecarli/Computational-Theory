@@ -173,3 +173,46 @@ Calculate the first 100 prime numbers using two well-established algorithms:
 ### **4. Verify Word in an Online Dictionary**
 - To confirm the word exists, an **automated search** was performed in **Merriam-Webster**.
 - The dictionary lookup ensures that the word is **genuinely English**
+
+---
+
+# Task 7: Turing Machines
+
+## **Objective**
+- Design a **Turing Machine** that adds **1** to a binary number.
+- The machine starts at the **left-most non-blank symbol**.
+- The **right-most bit** is the **least significant bit (LSB)**.
+
+---
+
+## **Approach**
+1. **Define Turing Machine rules** for binary addition.
+2. **Simulate the Turing Machine in Python**.
+3. **Process binary numbers by flipping bits and propagating carries**.
+
+---
+### **Explanation**
+1. **Start at the right-most bit**.
+2. **If the bit is `1`**, turn it into `0` and move left (carry propagation).
+3. **If the bit is `0`**, turn it into `1` and halt (no carry needed).
+4. **If there's no more bits (blank space), write `1` to extend the number**.
+---
+## **Example**
+| **Input** | **Output** |
+|----------|----------|
+| `100111` | `101000` |
+| `111` | `1000` |
+| `0` | `1` |
+| `1` | `10` |
+| `1111` | `10000` |
+
+---
+
+## **Methodology**
+### **How the Turing Machine Adds 1**
+1. **Start at the right-most bit**.
+2. **If we see a `1`**, change it to `0` (carry the 1).
+3. **If we see a `0`**, change it to `1` and stop.
+4. **If all bits are flipped (`111...` turns into `000...`), add a `1` at the beginning**.
+
+---
