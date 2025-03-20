@@ -216,3 +216,52 @@ Calculate the first 100 prime numbers using two well-established algorithms:
 4. **If all bits are flipped (`111...` turns into `000...`), add a `1` at the beginning**.
 
 ---
+
+# Task 8: Computational Complexity
+
+## **Objective**
+- Implement **Bubble Sort** in Python.
+- Modify the algorithm to **count the number of comparisons** made during sorting.
+- **Sort all permutations** of the list `L = [1, 2, 3, 4, 5]`.
+- Print each permutation **along with the number of comparisons**.
+
+---
+
+## **Approach**
+1. **Implement Bubble Sort** with a counter to track comparisons.
+2. **Generate all permutations** of `[1, 2, 3, 4, 5]`.
+3. **Sort each permutation** using Bubble Sort.
+4. **Record and print the number of comparisons** for each permutation.
+
+---
+
+## **Bubble Sort Algorithm with Comparison Counter**
+- Bubble Sort is a **simple sorting algorithm** that repeatedly swaps adjacent elements if they are in the wrong order.
+- We count the **number of comparisons** made during sorting.
+
+### **Time Complexity of Bubble Sort**
+| **Case** | **Time Complexity** |
+|---------|----------------|
+| **Best Case (Already Sorted)** | `O(n)` |
+| **Worst Case (Reverse Sorted)** | `O(n²)` |
+| **Average Case** | `O(n²)` |
+
+---
+
+## **Example Output**
+| **Permutation** | **Comparisons Required** |
+|---------------|--------------------|
+| `[1, 2, 3, 4, 5]` | `10` |
+| `[5, 4, 3, 2, 1]` | `10` |
+| `[3, 1, 4, 5, 2]` | `9` |
+| `[4, 5, 3, 1, 2]` | `10` |
+
+---
+
+## **Methodology**
+### **Steps Taken**
+1. **Generate all permutations** of `[1, 2, 3, 4, 5]`.
+2. **Apply Bubble Sort** to each permutation.
+3. **Count the number of comparisons** made.
+
+---
